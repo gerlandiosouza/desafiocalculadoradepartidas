@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <script>
+
+            let vitorias = prompt("Informe o número de vitórias: ")
+            let derrotas = prompt("Informe o número de derrotas: ")
+            let nivel = ""
+
+ // Função para calcular o saldo de vitórias           
+
+            function saldoVitorias () {
+              // Converter strings para números
+                vitorias = parseInt(vitorias);
+                derrotas = parseInt(derrotas);
+
+                let valor = vitorias - derrotas;
+
+                if (valor < 10 ) {
+                    nivel = "Ferro";
+                } else if ( valor >= 10 && valor < 20){
+                    nivel = "Bronze";
+                } else if ( valor >= 21 && valor < 50){
+                    nivel = "Prata";
+                } else if ( valor >= 51 && valor < 80){
+                    nivel = "Ouro";
+                } else if ( valor >= 81 && valor < 90){
+                    nivel = "Diamante";
+                } else if ( valor >= 91 && valor < 100){
+                    nivel = "Lendário";
+                } else if ( valor >= 101){
+                    nivel = "Imortal";
+                }
+
+                return valor;  //retorna valor para ser reutilizado
+
+            }
+
+            let resultado = saldoVitorias (); // Chama a função e armazena o resultado em uma variável
+
+            alert(`O Herói tem saldo de ${resultado} vitórias e está no nível de ${nivel}`)
+        </script>
+    </body>
+</html>
